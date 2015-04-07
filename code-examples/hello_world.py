@@ -25,7 +25,7 @@ word = Word(alphas+"'.") # alphas = a-z upper and lowercase
 salutation = Group( OneOrMore(word) )
 comma = Suppress(",")
 greetee = Group( OneOrMore(word) )
-endpunc = oneOf("! ?")
+endpunc = oneOf("! ?") # oneOf is case sensitive
 greeting = salutation + comma + greetee + endpunc
 
 # Use the grammar
